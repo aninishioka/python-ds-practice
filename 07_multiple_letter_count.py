@@ -9,6 +9,9 @@ def multiple_letter_count(phrase):
     """
     letter_counts = {}
     for letter in phrase:
-        if (letter not in letter_counts):
-            letter_counts[letter] = phrase.count(letter)
+        letter_counts[letter] = letter_counts.get(letter, 0) + 1
+    #    if (letter not in letter_counts):
+    #        letter_counts[letter] = phrase.count(letter)
     return letter_counts
+
+
