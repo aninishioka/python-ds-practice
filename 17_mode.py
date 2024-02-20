@@ -11,3 +11,12 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    num_freqs = {}
+    highest_count = 0
+    mode = None
+    for num in nums:
+        num_freqs[num] = num_freqs.get(num, 0) + 1
+        if num_freqs[num] > highest_count:
+            highest_count = num_freqs[num]
+            mode = num
+    return mode
